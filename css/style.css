@@ -1,0 +1,1843 @@
+
+@font-face {
+    font-family: alscript;
+    src: url("../fonts/alsscrp.ttf"); /*imported font - elispeses tell the css to look for the font outside of the css file */
+}
+  
+@font-face {
+    font-family: myeong;
+    src: url("../fonts/NanumMyeongjo-Regular.ttf");
+}
+  
+@font-face {
+    font-family: poppins;
+    src: url("../fonts/Poppins-Regular.ttf");
+}
+
+.spinner {
+    width: 64px;
+    height: 64px;
+    border: 8px solid;
+    border-color: #e9a5b1 transparent #e9a5b1 transparent;
+    border-radius: 50%;
+    animation: spin-anim 10.5s linear infinite;
+}
+
+@keyframes spin-anim {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    10% {
+        transform: rotate(50deg);
+    }
+
+    25% {
+        transform: rotate(90deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loader-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background: rgb(250, 237, 237);
+    z-index: 110;
+}
+
+body {
+    font-family: "poppins";
+    color:#c29898;
+    margin:0;
+    padding:0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-image: linear-gradient(rgb(254, 243, 238), rgba(255,244,238)); 
+}
+  
+html {
+    height: 100%;
+}
+
+header {
+    position: fixed;
+    overflow: hidden;
+    width:100%;
+    top: 0;
+    z-index: 104;
+}
+
+.links {
+    display:inline-block;
+    text-align: center;
+    width: 10%;
+    margin-left: 1%;  
+    padding-left: 10px;
+    font-size: 20px;
+    color:#997b71;
+    text-decoration:none;
+    border: none;
+    transition-duration: 0.10s;
+    cursor: pointer;
+}
+
+a:hover {
+    text-decoration: underline solid 4px #c19390; /*when a user hovers this underline will appear over the links*/
+    text-underline-position: 2px;
+    border-radius: 4px;                     /*softens the edges*/
+    
+}
+
+.cruelty {
+    background-color: #FEF8E7;
+    top:0;
+    width: 100%;
+    padding:10px;
+}
+
+nav {
+    top:20px;
+    width: 100%;
+    background-color: #FBD3D7;
+    
+}
+
+.logo {
+    width: 150px; 
+    height: 20px;
+    margin-right: 5%;  
+    padding-left: 5%;
+}
+
+.title {
+   margin-right: 5%;  
+   padding-left: 2%;
+   width: 1200px; 
+   position: absolute;
+   margin-top:5%;
+}
+
+.lippearl {
+  width: 3000px;
+  height: 3500px;
+  position: relative;
+  margin-left: 10%;
+  animation: moving 1s infinite  alternate;
+}
+@keyframes moving {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+ 
+.sparkle1 {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 15%;
+    margin-left: 80%;
+    animation: moving 1s infinite  alternate;
+}
+@keyframes moving {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+
+.sparkle2 {
+    width: 700px;
+    height: 700px;
+    position: absolute;
+    top: 15%;
+    margin-left: 10%;
+    animation: moving 1s infinite  alternate;
+}
+@keyframes moving {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(10px); }
+}
+
+.pearly {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 60%;
+    margin-left: 10%;
+}
+
+.pearlie {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    margin-left: 70%;
+}
+
+.pearlie2 {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 35%;
+    margin-left: 50%;
+}
+
+.pearlie3 {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 60%;
+    margin-left: 40%;
+}
+
+.pearlie4 {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 10%;
+    margin-left: 70%;
+}
+
+.title {
+    animation: 5s linear infinite;
+    z-index: 100;
+    transition-duration: 1.0s; /*this is how long the hover transition will take*/ 
+}
+
+.title:hover {
+   opacity: 0.1
+}
+
+.gallery {
+    font-family:"gillsan";
+    font-size: 70px;
+    color: #CA9C89;
+    position: absolute;
+    top: 88%;
+    left: 5px;
+    margin-left: 10px;
+    padding-left: 5px;
+    
+}
+
+.sl-dialogue {
+    position: relative;
+    top:100px;
+}
+
+.photos {
+   position: absolute;
+   top:95%;
+   right: 0;
+   left:0;
+    height: 75%;
+    display: flex;
+    flex-direction: row;
+    overflow-x:scroll; 
+    z-index: 100;
+}
+
+.inbetweenpearl {
+    max-width: 100px;
+    max-height: 100px;
+    margin-top: 10%;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+   
+}    
+    
+.faces {
+    max-width: 1000px;
+    max-height: 1000px;
+    transition-duration: 0.50s;
+
+}
+
+.faces:hover {
+    max-width: 1400px;
+    max-height: 1000px;
+
+    
+}
+.minishadow {
+    max-width: 1000px;
+    max-height: 100px;
+    text-align: center;
+    font-size:40px;
+    font-family: "myeong"
+}
+
+sl-button::part(base) {
+    position: relative;
+    top: -3px;
+    background:#c29898;
+    color:#FEF8E7;
+    font-family: "poppins";
+    font-size: 15px;
+    height: 35px;
+}
+
+.rating {
+    color:ivory
+}
+
+.quote {
+    z-index: 120;
+    position: absolute;
+    top: 160%;
+    left: 370px;
+    right: 370px;
+    padding: 10px;
+    text-align: center;
+    font-family:"gillsan";
+    font-style: italic;
+    color: #CA9C89; 
+    font-size: 30px;
+    animation: underl 5s linear infinite;
+    border:rgb(255, 226, 224) solid 2px;
+    border-radius: 30px;
+    background-color: #FFF9ED;
+    border-bottom: rgb(255, 226, 224) solid 10px;
+   
+}
+
+.quote:hover {  /*this linear gradient is different than the title as it only occurs when the user hovers over the quote */
+    opacity: 1;
+    background-image: linear-gradient(
+     -225deg,
+     rgb(231, 199, 199) 10%, /*these are colour stops, here the colour moves from white at 10% all the way to that brown at 100% going through each individual colour*/
+     #eedfdd 29%, 
+     #f8d8cf 47%,
+     #dabbb3 57%,
+     #dfbdb1 67%,
+     #e0b9b2 79%, 
+     #d4b8b8 100%
+    );
+     
+    background-clip: border-box;
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: show;
+    animation: textclip 5s linear infinite;   
+  }
+  
+  @keyframes textclip {
+    from {display: none;}
+    to {background-position: 200% center;}
+  }
+  
+.ribbonother {
+    position: absolute;
+    top: 190%;
+    max-width: 1000px;
+    max-height: 1000px;
+    animation: mover 1s infinite  alternate;
+}
+@keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+
+.ribbonpearl {
+    position: absolute;
+    top: 190%;
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.ribbonpearl2 {
+    position: absolute;
+    top: 210%;
+    left: 90%;
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.barette {
+    position: absolute;
+    left: 18.9%;
+    top: 225%;
+    text-align: center;
+    font-size: 40pt;
+    font-family: "gillsan";
+    color: #a08484;
+    z-index: 90;
+}
+.point {
+    position: absolute;
+    left: 21.2%;
+    top: 227%;
+    text-align: center;
+    font-size: 65pt;
+    font-family: "gillsan";
+    color: #aa5050;
+    z-index: 90;
+}
+
+.bbody {
+    position: absolute;
+    left: 18.1%;
+    top: 245%;
+    text-align: center;
+    font-size: 25pt;
+    font-family: "gillsan";
+    color: #c29898;
+    z-index: 90;
+
+    padding: 40px 10px 40px 10px;
+    background-color: #FDE6E5;
+    border-radius: 10px;
+}
+
+.point1 {
+    position: absolute;
+    left: 47.5%;
+    top: 227%;
+    text-align: center;
+    font-size: 65pt;
+    font-family: "gillsan";
+    color: #aa5050;
+    z-index: 90;
+}
+
+.barette1 {
+    position: absolute;
+    left: 44.5%;
+    top: 225%;
+    text-align: center;
+    font-size: 40pt;
+    font-family: "gillsan";
+    color: #a08484;
+    z-index: 90;
+}
+
+.bbody2 {
+    position: absolute;
+    left: 44.3%;
+    top: 245%;
+    text-align: center;
+    font-size: 25pt;
+    font-family: "gillsan";
+    color: #c29898;
+
+    padding: 40px 10px 40px 10px;
+   
+    background-color: #FDE6E5;
+    border-radius: 10px;
+    z-index: 90;
+}
+
+
+.point2 {
+    position: absolute;
+    left: 72.5%;
+    top: 227%;
+    text-align: center;
+    font-size: 65pt;
+    font-family: "gillsan";
+    color: #aa5050;
+    z-index: 90;
+}
+
+.barette2 {
+    position: absolute;
+    left: 70.5%;
+    top: 225%;
+    text-align: center;
+    font-size: 34.5pt;
+    font-family: "gillsan";
+    color: #a08484;
+    z-index: 90;
+}
+
+.bbody1 {
+    position: absolute;
+    left: 70.5%;
+    top: 245%;
+    text-align: center;
+    font-size: 25pt;
+    font-family: "gillsan";
+
+    padding: 40px 10px 40px 10px;
+    background-color: #FDE6E5;
+    border-radius: 10px;
+   
+    color: #c29898;
+    z-index: 90;
+}
+
+.gold {
+    position: absolute;
+    top: 215%;
+    display:flex;
+    flex-direction: row;
+    padding-left: 300px;
+    
+}
+  
+.goldie , .goldie2 , .goldie3 {
+    padding-left: 100px;
+    padding-right: 100px;
+    max-width: 1000px;
+    max-height: 700px;
+    z-index: 80;
+  
+    transition-duration: 1.0s; /*this is how long the hover transition will take*/ 
+}
+
+.volume {
+    position: absolute;
+    left:2%;
+    top:5%;
+    padding: 0;
+}
+
+sl-icon-button::part(base) {
+    width:40px;
+}
+
+.pel {
+  
+   position: absolute;
+   top: 280%;
+   left: 15.5%;
+   display: block;
+   text-align: center;
+   
+}
+
+.pel2 {
+    position: absolute;
+    top: 315%;
+    display: flex;
+    flex-direction: row;
+   
+}
+
+.pearl1 , .pearl2 , .pearl3,.sidepearl1 , .sidepearl2 {
+    padding-left: 0px;
+    padding-right: 0px;
+    max-width: 300px;
+    max-height: 300px;
+}
+
+.sidepearl3 {
+    top: 339%;
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.sidepearl4 {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.pearles {
+    padding-left: 90px;
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.pearles2 {
+    padding-left: 410%;
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.member {
+    margin-right: 5%;  
+    padding-left: 10%;
+    width: 1200px; 
+    position: absolute;
+    top:190%;
+}
+
+.abbout {
+    position: relative;
+    top:600px;
+    
+    max-width: 500px;
+    display: block; 
+    text-align: center;
+    margin-left: 40%;
+}
+
+.text {
+    font-family: "gillsan";
+    text-align: center;
+    color: #CA9C89;
+    font-size: 30px;
+
+    max-width: 100%;
+    padding: 30px;
+    margin-right: 20%;
+    margin-left: 20%;
+
+    border-radius: 30px;
+    position: relative;
+    top:700px;
+    
+}  
+
+.text2 {
+    font-family: "gillsan";
+    text-align: center;
+    color: #CA9C89;
+    font-size: 30px;
+}
+
+.pink {
+    max-width: 150px;
+    padding-top: 10%;
+}
+
+footer {
+    display:flex;
+    position: absolute;
+    top: 400%;
+    width: 100%;
+    height: 70%;
+    background: #e0b9b2;
+    border-top:#FFF9ED 20px dotted;
+}
+.contacts {
+    font-size: 50px;
+    color: #e6c9c9;
+    position: absolute;
+    margin-top: -9%;
+    left: 7%;
+    margin-left: 30px;
+    padding-left: 20px;
+    
+}
+  
+.contact {
+    margin-left: 40%;
+    margin-top:5%;
+    padding: 30px;
+    border-radius: 10px;
+  
+    font-size: 20px;
+  
+  
+    width: 30%;
+    height: 20%;
+    opacity: 0.5;
+    transition: width 2s, height 4s;  /* this is so that the transition of the width is delayed slightly and less jarring */ 
+    
+}
+  
+form { 
+    margin-top: 20px;
+    background-color: #c19390;
+    padding: 30px;
+    border-radius: 10px;
+}
+  
+.contact:hover {
+    opacity: 1;
+    width:30%;
+    height: 30%;
+}
+  
+input[type=text], textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc; /* Contrasting the input area and the background to make easier to notice */ 
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;  
+}
+  
+input[type=email], textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+      
+}
+    
+input[type=submit] {
+    background-color:#9c6d64;
+    color: white;
+    padding: 12px 40px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 20px;
+}
+    
+input[type=submit]:hover {
+    background-color:#636960;
+}
+    
+.icons {
+    display:inline-block;
+    margin-top: 10%;
+    margin-left: 10%;
+    padding-top: 20px;
+}
+  
+.icon {
+    width: 35px;
+    height: 30px;
+}
+
+.icons1 {
+    margin-top: 10.5%;
+    width: 35px;
+    height: 30px;
+}
+
+label {
+    color:ivory
+}
+
+.insta {
+    font-size: 50px;
+    color:#724f4f;
+    opacity: 0.9;
+    text-decoration:none;
+    padding:20px;
+}
+  
+.end {
+    display:flex;
+    position: absolute;
+    top: 600%;
+    width: 100%;
+    height: 70%;
+    background: #493a29;
+    border-left: solid 4px #835C24;
+}
+
+#button2 {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color:#c19390;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+    font-family: "myeong";
+  }
+  
+#button2:hover {
+    background-color: rgb(175, 143, 143);
+} 
+
+.mobilecards {
+    display: none;
+}
+
+/*/////////// MEDIA QUERIES /////////////////*/ 
+
+@media only screen and (max-width:1366px) {
+
+    .links {
+        width: 4.5%;
+        margin-left: 1%;  
+        padding-left: 10px;
+        font-size: 20px;
+    }
+    
+    .logo {
+        width: 150px; 
+        height: 20px;
+        margin-right: 5%;  
+        padding-left: 5%;
+    }
+    
+    .title {
+        margin-right: 1%;  
+        padding-left: 1%;
+        width: 800px; 
+        position: absolute;
+        margin-top:10%;
+        left: 20px;
+    }
+    
+    .lippearl {
+        width: 1700px;
+        height: 1900px;
+        margin-left: 40px;
+        margin-top: 5%;
+        
+    }
+    .pearly {
+        width: 30px;
+        height: 30px;
+        margin-left: 15%;
+        top: 45%;
+    }
+
+    .pearlie {
+        width: 80px;
+        height: 80px;
+        top: 60%;
+        margin-left: 90%;
+    }
+
+    .pearlie2 {
+        width: 70px;
+        height: 70px;
+        top: 35%;
+        margin-left: 65%;
+    }
+
+    .pearlie3 {
+        width: 50px;
+        height: 50px;
+        top: 60%;
+        margin-left: 50%;
+    }
+
+    .pearlie4 {
+        width: 50px;
+        height: 50px;
+        top: 20%;
+        margin-left: 97%;
+    }
+
+    .gallery {
+        font-size: 50px;
+        top: 110%;
+        left: 5px;
+        margin-left: 10px;
+        padding-left: 5px;
+    }
+
+    .photos {
+        position: absolute;
+        top:120%;
+        right: 0;
+        left:0; 
+        height: 100%;
+    }
+
+    .faces {
+        max-width: 700px;
+        max-height: 700px;
+        transition-duration: 0.50s;
+    }
+
+    .faces:hover {
+        max-width: 900px;
+        max-height: 900px;
+    }
+
+    .minishadow {
+        max-width: 700px;
+        max-height: 700px;
+        text-align: center;
+        font-size:40px;
+        font-family: "myeong";
+        padding: 0;
+        margin:0;
+    }
+
+    .quote {
+        top: 210%;
+        left: 100px;
+        right: 100px;
+        padding: 10px;
+        font-size: 30px;
+    }
+
+    .ribbonother {
+        position: absolute;
+        top: 230%;
+        max-width: 1000px;
+        max-height: 1000px;
+    }
+
+    .ribbonpearl {
+        position: absolute;
+        top: 255%;
+        left: 140px;
+        max-width: 70px;
+        max-height: 70px;
+    }
+
+    .ribbonpearl2 {
+        position: absolute;
+        top: 240%;
+        left: 90%;
+        max-width: 60px;
+        max-height: 60px;
+    }
+
+    .member {
+        margin-right: 5%;  
+        padding-left: 20%;
+        width: 700px; 
+        position: absolute;
+        top:240%;
+    }
+
+    .member {
+        margin-right: 5%;  
+        padding-left: 20%;
+        width: 700px; 
+        position: absolute;
+        top:240%;
+    }
+
+    .gold {
+        position: absolute;
+        top: 265%;
+        display:flex;
+        flex-direction: row;
+        padding-left: 200px; 
+    }
+    
+    .goldie , .goldie2 , .goldie3 {
+        padding-left: 10px;
+        padding-right: 10px;
+        max-width: 700px;
+        max-height: 500px;
+    }
+
+    .barette {
+        left: 22%;
+        top: 275%;
+        text-align: center;
+        font-size: 20pt;
+    }
+
+    .barette1 {
+        left: 47.5%;
+        top: 275%;
+        text-align: center;
+        font-size: 20pt;
+    }
+
+    .barette2 {
+        left: 72.5%;
+        top: 275%;
+        font-size: 20pt;
+    }
+
+    .point {
+        left: 21.5%;
+        top: 273%;
+        font-size: 55pt;
+    }
+
+    .point1 {
+        left: 47.5%;
+        top: 273%;
+        font-size: 55pt
+    }
+
+    .point2 {
+        left: 72%;
+        top: 273%;
+        font-size: 55pt;
+    }
+
+    .bbody {
+        left: 19.3%;
+        top: 300%;
+        font-size: 15pt;
+    }
+
+    .bbody2 {
+        left: 45.6%;
+        top: 300%;
+        font-size: 15pt;
+    }
+
+    .bbody1 {
+        left: 71.8%;
+        top: 300%;
+        text-align: center;
+        font-size: 15pt;
+    }
+
+    .volume {
+        left:2%;
+        top:10%;
+        padding: 0;
+    }
+
+    .pel {
+        top: 340%;
+        left: 6%;
+        display: block;
+        text-align: center;
+    }
+
+    .pel2 {
+        position: absolute;
+        top: 375%;
+        display: flex;
+        flex-direction: row;
+        padding-left: 15.5%;
+    }
+
+    .pearl1 , .pearl2 , .pearl3 ,.sidepearl1 , .sidepearl2 {
+        padding-left: 0px;
+        padding-right: 0px;
+        max-width: 200px;
+        max-height: 200px;
+    }
+
+    .sidepearl3 {
+        top: 339%;
+        max-width: 100px;
+        max-height: 100px;
+    }
+
+    .sidepearl4 {
+        max-width: 100px;
+        max-height: 100px;
+    }
+
+    .pearles {
+        padding-left: 60px;
+        max-width: 100px;
+        max-height: 100px;
+    }
+
+    .pearles2 {
+        padding-left: 240%;
+        max-width: 100px;
+        max-height: 100px;
+    }
+
+    .abbout {
+        position: relative;
+        top:920px;
+        
+        max-width: 500px;
+        display: block; 
+        text-align: center;
+        margin-left: 31.5%;
+    }
+
+    .text {
+        font-family: "gillsan";
+        text-align: center;
+        color: #CA9C89;
+        font-size: 30px;
+
+        max-width: 100%;
+        padding: 30px;
+        margin-right: 10%;
+        margin-left: 10%;
+
+        border-radius: 30px;
+        position: relative;
+        top:920px;
+    }
+    
+    .pink {
+        max-width: 150px;
+        padding-top: 10%;
+    }
+
+    footer {
+        display:flex;
+        position: absolute;
+        top: 490%;
+        width: 100%;
+        height: 70%;
+    }
+
+    .contacts {
+        font-size: 50px;
+        color: #e6c9c9;
+        position: absolute;
+        margin-top: -9%;
+        left: 7%;
+        margin-left: 30px;
+        padding-left: 20px;
+        
+    }
+    
+    .contact {
+        margin-left: 20%;
+        margin-top:10px;
+        padding: 30px;
+        border-radius: 10px;
+        font-size: 20px;
+        width: 35%;
+        height: 20%; 
+    }
+
+    .contact:hover {
+        opacity: 1;
+        width:40%;
+        height: 30%;
+    }
+    
+    form { 
+        margin-top: 10px;
+        background-color: #c19390;
+        padding: 20px;
+        border-radius: 10px;
+    }
+    
+    .icons {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10%;
+        margin-left: 10%;
+        padding-top: 20px;
+    }
+
+    .icons1 {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10%;
+        padding-top: 20px;
+        width: 0px;
+        height: 0px;
+    }
+
+    .insta {
+        font-size: 30px;
+        color:#724f4f;
+        opacity: 0.9;
+        text-decoration:none;
+        padding:20px;
+    }
+  
+    
+}
+
+@media only screen and (max-width:1024px) {
+
+    .links {
+        max-width: 7%;
+        margin-left: 0%;  
+        padding-left: 30px;
+        font-size: 20px;    
+    } 
+        
+    .logo {
+        width: 150px; 
+        height: 20px;
+        margin-right: 1%;  
+        padding-left: 1%;
+    }
+        
+    .title {
+        margin-right: 1%;  
+        padding-left: 1%;
+        width: 600px; 
+        position: absolute;
+        margin-top:13%;
+        left: -20px;
+    }
+        
+    .lippearl {
+        width: 1600px;
+        height: 1700px;
+        margin-left: -100px;
+        margin-top: 7%;
+        
+    }
+
+    .pearly {
+        width: 30px;
+        height: 30px;
+        margin-left: 15%;
+        top: 45%;
+    }
+
+    .pearlie {
+        width: 80px;
+        height: 80px;
+        top: 60%;
+        margin-left: 90%;
+    }
+
+    .pearlie2 {
+        width: 70px;
+        height: 70px;
+        top: 35%;
+        margin-left: 65%;
+    }
+
+    .pearlie3 {
+        width: 50px;
+        height: 50px;
+        top: 60%;
+        margin-left: 50%;
+    }
+
+    .pearlie4 {
+        width: 50px;
+        height: 50px;
+        top: 20%;
+        margin-left: 97%;
+    }
+
+    .gallery {
+        font-size: 50px;
+        top: 98%;
+        left: 5px;
+        margin-left: 10px;
+        padding-left: 5px;
+    }
+
+    .sl-dialogue {
+        position: relative;
+        top:100px;
+    }
+
+    .photos {
+        position: absolute;
+        top:110%;
+        right: 0;
+        left:0; 
+        height: 100%;
+    }
+
+    .faces {
+        max-width: 700px;
+        max-height: 700px;
+        transition-duration: 0.50s;
+    }
+
+    .faces:hover {
+        max-width: 900px;
+        max-height: 900px;
+    }
+
+    .minishadow {
+        max-width: 700px;
+        max-height: 700px;
+        text-align: center;
+        font-size:40px;
+        font-family: "myeong";
+        padding: 0;
+        margin:0;
+    }
+
+    .quote {
+        top: 200%;
+        left: 100px;
+        right: 100px;
+        padding: 10px;
+        font-size: 30px;
+    }
+
+    .ribbonother {
+        position: absolute;
+        top: 230%;
+        max-width: 1000px;
+        max-height: 1000px;
+    }
+
+    .ribbonpearl {
+        position: absolute;
+        top: 255%;
+        left: 140px;
+        max-width: 70px;
+        max-height: 70px;
+    }
+
+    .ribbonpearl2 {
+        position: absolute;
+        top: 240%;
+        left: 90%;
+        max-width: 60px;
+        max-height: 60px;
+    }
+
+    .gold {
+        position: absolute;
+        top: 265%;
+        display:flex;
+        flex-direction: row;
+        padding-left: 100px; 
+    }
+    
+    .goldie , .goldie2 , .goldie3 {
+        padding-left: 10px;
+        padding-right: 10px;
+        max-width: 500px;
+        max-height: 400px;
+    }
+
+    .barette {
+        left: 16%;
+        top: 275%;
+        text-align: center;
+        font-size: 20pt;
+    }
+
+    .barette1 {
+        left: 43.5%;
+        top: 275%;
+        text-align: center;
+        font-size: 20pt;
+    }
+
+    .barette2 {
+        left: 70.5%;
+        top: 275%;
+        font-size: 20pt;
+    }
+
+    .point {
+        left: 15.2%;
+        top: 270%;
+        font-size: 55pt;
+    }
+
+    .point1 {
+        left: 43.5%;
+        top: 270%;
+        font-size: 55pt
+    }
+
+    .point2 {
+        left: 69.5%;
+        top: 270%;
+        font-size: 55pt;
+    }
+
+    .bbody {
+        left: 14.3%;
+        top: 293%;
+        font-size: 13pt;
+    }
+
+    .bbody2 {
+        left: 42.6%;
+        top: 293%;
+        font-size: 13pt;
+    }
+
+    .bbody1 {
+        left: 70.8%;
+        top: 293%;
+        text-align: center;
+        font-size: 13pt;
+    }
+
+    .volume {
+        left:2%;
+        top:5%;
+        padding: 0;
+    }
+
+    sl-icon-button::part(base) {
+        width:40px;
+    }
+
+    .pel {
+        top: 340%;
+        left: 3%;
+        display: block;
+        text-align: center;
+    }
+
+    .pel2 {
+        position: absolute;
+        top: 375%;
+        display: flex;
+        flex-direction: row;
+        padding-left: 10px;
+    }
+
+    .pearl1 , .pearl2 ,.sidepearl1 , .pearl3, .sidepearl2{
+        padding-left: 0px;
+        padding-right: 0px;
+        max-width: 150px;
+        max-height: 150px;
+    }
+
+    .sidepearl4 , .sidepearl3 {
+        max-width: 100px;
+        max-height: 100px;
+    }
+    .pearles {
+        padding-left: 60px;
+        max-width: 100px;
+        max-height: 100px;
+    }
+
+    .pearles2 {
+        padding-left: 240%;
+        max-width: 100px;
+        max-height: 100px;
+    }
+
+    .member {
+        margin-right: 5%;  
+        padding-left: 20%;
+        width: 700px; 
+        position: absolute;
+        top:240%;
+    }
+
+    .abbout {
+        position: relative;
+        top:1080px;
+        
+        max-width: 500px;
+        display: block; 
+        text-align: center;
+        margin-left: 25%;
+    }
+
+    .text {
+        font-family: "gillsan";
+        text-align: center;
+        color: #CA9C89;
+        font-size: 30px;
+
+        max-width: 100%;
+        padding: 30px;
+        margin-right: 10%;
+        margin-left: 10%;
+
+        border-radius: 30px;
+        position: relative;
+        top:1080px;
+    }
+
+    .pink {
+        max-width: 150px;
+        padding-top: 10%;
+    }
+
+    footer {
+        display:flex;
+        position: absolute;
+        top: 490%;
+        width: 100%;
+        height: 70%;
+    }
+
+    .contacts {
+        font-size: 50px;
+        color: #e6c9c9;
+        position: absolute;
+        margin-top: -9%;
+        left: 7%;
+        margin-left: 30px;
+        padding-left: 20px;
+        
+    }
+    
+    .contact {
+        margin-left: 20%;
+        margin-top:10px;
+        padding: 30px;
+        border-radius: 10px;
+        font-size: 20px;
+        width: 35%;
+        height: 20%; 
+    }
+
+    .contact:hover {
+        opacity: 1;
+        width:40%;
+        height: 30%;
+    }
+    
+    form { 
+        margin-top: 10px;
+        background-color: #c19390;
+        padding: 20px;
+        border-radius: 10px;
+    }
+    
+    .icons {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10%;
+        margin-left: 10%;
+        padding-top: 20px;
+    }
+
+    .icons1 {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10%;
+        padding-top: 20px;
+        width: 0px;
+        height: 0px;
+    }
+
+    .insta {
+        font-size: 30px;
+        color:#724f4f;
+        opacity: 0.9;
+        text-decoration:none;
+        padding:20px;
+    }
+  
+} 
+
+@media only screen and (max-width:390px) {
+
+    .links {
+        max-width: 2%;
+        margin-left: 0%;  
+        padding-left: 40px; 
+        font-size: 10px;  
+    } 
+        
+    .logo {
+        width: 150px; 
+        height: 20px;
+        margin-right: 1%;  
+        padding-left: 1%;
+    }
+        
+    .title {
+        margin-right: 1%;  
+        padding-left: 1%;
+        width: 400px; 
+        position: absolute;
+        margin-top:35%;
+        left: -20px;
+    }
+        
+    .lippearl {
+        width: 1300px;
+        height: 1700px;
+        margin-left: -250px;
+        margin-top: 7%;
+        z-index: 0;
+        
+    }
+
+    .pearly {
+        width: 30px;
+        height: 30px;
+        margin-left: 100%;
+        top: 45%;
+    }
+
+    .pearlie {
+        width: 80px;
+        height: 80px;
+        top: 50%;
+        margin-left: 100%;
+    }
+
+    .pearlie2 {
+        width: 70px;
+        height: 70px;
+        top: 40%;
+        margin-left: 75%;
+    }
+
+    .pearlie3 {
+        width: 50px;
+        height: 50px;
+        top: 40%;
+        margin-left: 175%;
+    }
+
+    .pearlie4 {
+        width: 50px;
+        height: 50px;
+        top: 20%;
+        margin-left: 115%;
+    }
+
+    .gallery {
+        font-size: 40px;
+        top: 98%;
+        left: 10px;
+        margin-left: 10px;
+        padding-left: 5px;
+    }
+
+    .photos {
+        position: absolute;
+        top:110%;
+        right: 0;
+        left:0; 
+        height: 100%;
+        width: 165%;
+    }
+
+    .faces {
+        max-width: 700px;
+        max-height: 700px;
+        transition-duration: 0.50s;
+    }
+
+    .faces:hover {
+        max-width: 900px;
+        max-height: 900px;
+    }
+
+    .minishadow {
+        max-width: 1000px;
+        max-height: 1000px;
+        text-align: center;
+        font-size:40px;
+        font-family: "myeong";
+        padding: 0;
+        margin:0;
+    }
+
+    .quote {
+        top: 200%;
+        left: 100px;
+        right: 100px;
+        padding: 10px;
+        font-size: 30px;
+        width: 100%;
+    }
+
+    .ribbonother {
+        position: absolute;
+        top: 230%;
+        max-width: 1000px;
+        max-height: 1000px;
+    }
+
+    .ribbonpearl {
+        position: absolute;
+        top: 255%;
+        left: 140px;
+        max-width: 70px;
+        max-height: 70px;
+    }
+
+    .ribbonpearl2 {
+        position: absolute;
+        top: 265%;
+        left: 95%;
+        max-width: 60px;
+        max-height: 60px;
+    }
+
+    .member {
+        margin-right: 5%;  
+        padding-left: 40%;
+        width: 500px; 
+        position: absolute;
+        top:245%;
+        z-index: 100;
+    }
+
+    .mobilecards {
+        position: absolute;
+        top:270%;
+        right: 0;
+        left:0;
+        height: 100%;
+        width: 165%;
+        display: flex;
+        flex-direction: row;
+        overflow-x:scroll; 
+        z-index: 100;
+    }
+
+    .minishadows2 {
+        max-width: 100%;
+        max-height: 100%;
+        text-align: center;
+        font-size:40px;
+        font-family: "myeong";
+        padding: 0;
+        margin:0;
+    }
+
+    .small {
+        max-width: 500px;
+        max-height: 500px;
+    }
+
+    .gold {
+      display: none;
+    }
+    
+    .goldie , .goldie2 , .goldie3 {
+        display: none;
+    }
+
+    .barette2, .barette , .barette1 {
+        display: none;
+    }
+
+
+    .point , .point2 , .point1 {
+       display: none;
+    }
+
+   
+    .bbody , .bbody1 , .bbody2 {
+        display: none;
+    }
+
+    .volume {
+        left:2%;
+        top:5%;
+        padding: 0;
+    }
+
+    sl-icon-button::part(base) {
+        width:40px;
+    }
+
+    .pel {
+        top: 340%;
+        left: 33%;
+        display: inline;
+        text-align: center;
+        width: 100%;
+    }
+
+    .pel2 {
+        display: none;
+    }
+
+    .pearl1 , .pearl2 ,.sidepearl1 , .pearl3, .sidepearl2{
+        padding-left: 0px;
+        padding-right: 0px;
+        max-width: 55px;
+        max-height: 55px;
+    }
+
+    .sidepearl4 , .sidepearl3 {
+        max-width: 40px;
+        max-height: 40px;
+        padding: 0;
+    }
+
+    .abbout {
+        position: relative;
+        top:1300px;
+        
+        max-width: 300px;
+        margin-left: 40%;
+    }
+
+    .text {
+        font-family: "gillsan";
+        text-align: center;
+        color: #CA9C89;
+        font-size: 40px;
+
+        width: 155%;
+        padding: 0px;
+        margin-right: 0%;
+        margin-left: 120px;
+
+        border-radius: 0px;
+        position: relative;
+        top:1300px;
+    }
+
+    .text2 {
+        font-size: 25px;
+        text-align: justify;
+        width: 100%;
+    }
+
+    .pink {
+        max-width: 150px;
+        padding-top: 10%;
+    }
+
+    footer {
+        display:flex;
+        position: absolute;
+        top: 490%;
+        width: 168%;
+        height: 70%;
+    }
+
+    .contacts {
+        font-size: 50px;
+        color: #e6c9c9;
+        position: absolute;
+        margin-top: -9%;
+        left: 7%;
+        margin-left: 30px;
+        padding-left: 20px;
+        
+    }
+    
+    .contact {
+        margin-left: 20%;
+        margin-top:10px;
+        padding: 30px;
+        border-radius: 10px;
+        font-size: 20px;
+        width: 35%;
+        height: 20%; 
+    }
+
+    .contact:hover {
+        opacity: 1;
+        width:40%;
+        height: 30%;
+    }
+    
+    form { 
+        margin-top: 10px;
+        background-color: #c19390;
+        padding: 20px;
+        border-radius: 10px;
+        margin-left: 10%;
+    }
+    
+    .icons {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10%;
+        margin-left: 1%;
+        padding-top: 20px;
+    }
+
+    .icons1 {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10%;
+        padding-top: 20px;
+        width: 0px;
+        height: 0px;
+        font-size: 20px;
+    }
+
+    .insta {
+        font-size: 30px;
+        color:#724f4f;
+        opacity: 0.9;
+        text-decoration:none;
+        padding:20px;
+    }
+  
+    
+
+}
